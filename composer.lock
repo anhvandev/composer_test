@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "543e1ad8a6506ab3d04464008c49b4ae",
+    "content-hash": "f10c8e95511a8669767af1ca25efb005",
     "packages": [
         {
             "name": "brick/math",
@@ -930,16 +930,16 @@
         },
         {
             "name": "illuminate/auth",
-            "version": "v8.48.2",
+            "version": "v8.49.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/auth.git",
-                "reference": "b3aa22ee1dd239f23a6fed1caeaa980bc9a01f74"
+                "reference": "8c7847c73359f56b8610e3e4420184b7555738b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/auth/zipball/b3aa22ee1dd239f23a6fed1caeaa980bc9a01f74",
-                "reference": "b3aa22ee1dd239f23a6fed1caeaa980bc9a01f74",
+                "url": "https://api.github.com/repos/illuminate/auth/zipball/8c7847c73359f56b8610e3e4420184b7555738b0",
+                "reference": "8c7847c73359f56b8610e3e4420184b7555738b0",
                 "shasum": ""
             },
             "require": {
@@ -983,7 +983,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-05-19T18:02:19+00:00"
+            "time": "2021-07-05T15:30:07+00:00"
         },
         {
             "name": "illuminate/collections",

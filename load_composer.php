@@ -25,14 +25,14 @@ use Symfony\Component\Console\Output\OutputInterface;
 chdir(__DIR__);
 
 //$input = new ArrayInput(array('command' => 'require', 'packages' => ['illuminate/auth']));
-$input = new ArrayInput(array('command' => 'require', 'packages' => ['illuminate/auth']));
-//$output = new BufferedOutput();
-$output = new ConsoleOutput();
+$input = new ArrayInput(array('command' => 'install'));
+$output = new BufferedOutput();
+// $output = new ConsoleOutput();
 $application = new Application();
 
 $application->setAutoExit(false);
 $application->run($input, $output); //, $output);
 echo '<pre>';
-print_r('done');
+print_r($output->fetch());
 echo '</pre>';
 die;
