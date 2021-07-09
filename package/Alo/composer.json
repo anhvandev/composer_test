@@ -1,0 +1,14 @@
+{
+  "name": "navi/alo",
+  "description": "",
+  "title": "Đây là Alo",
+  "type": "package",
+  "autoload": {
+    "psr-4": {
+      "NaVi\\Alo\\": "src"
+    }
+  },
+  "require": {
+    "vlucas/phpdotenv": "^5.3.0"
+  }
+}

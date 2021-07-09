@@ -1,74 +1,109 @@
 {
   "require": {
-    "paquettg/php-html-parser": "^3.1",
-    "maximebf/debugbar": "^1.16",
-    "kint-php/kint": "^3.3",
-    "dompdf/dompdf": "^1.0",
     "composer/composer": "^2.0",
-    "illuminate/auth": "^8.49"
+    "dompdf/dompdf": "^1.0",
+    "kint-php/kint": "^3.3",
+    "maximebf/debugbar": "^1.16",
+    "navi/alo": "dev-master",
+    "paquettg/php-html-parser": "^3.1"
   },
   "scripts": {
     "pre-install-cmd": [
-      "MyCode\\MyComposer::preinstallcmd"
+      "MyCode\\MyComposer::preinstallcmd",
+      "MyCode\\MyComposer::getEvent"
     ],
     "post-install-cmd": [
-      "MyCode\\MyComposer::postinstallcmd"
+      "MyCode\\MyComposer::postinstallcmd",
+      "MyCode\\MyComposer::getEvent"
     ],
     "pre-update-cmd": [
-      "MyCode\\MyComposer::preupdatecmd"
+      "MyCode\\MyComposer::preupdatecmd",
+      "MyCode\\MyComposer::getEvent"
     ],
     "post-update-cmd": [
-      "MyCode\\MyComposer::postupdatecmd"
+      "MyCode\\MyComposer::postupdatecmd",
+      "MyCode\\MyComposer::getEvent"
     ],
     "pre-status-cmd": [
-      "MyCode\\MyComposer::prestatuscmd"
+      "MyCode\\MyComposer::prestatuscmd",
+      "MyCode\\MyComposer::getEvent"
     ],
     "post-status-cmd": [
-      "MyCode\\MyComposer::poststatuscmd"
+      "MyCode\\MyComposer::poststatuscmd",
+      "MyCode\\MyComposer::getEvent"
     ],
     "pre-archive-cmd": [
-      "MyCode\\MyComposer::prearchivecmd"
+      "MyCode\\MyComposer::prearchivecmd",
+      "MyCode\\MyComposer::getEvent"
     ],
     "post-archive-cmd": [
-      "MyCode\\MyComposer::postarchivecmd"
+      "MyCode\\MyComposer::postarchivecmd",
+      "MyCode\\MyComposer::getEvent"
     ],
     "pre-autoload-dump": [
-      "MyCode\\MyComposer::preautoloaddump"
+      "MyCode\\MyComposer::preautoloaddump",
+      "MyCode\\MyComposer::getEvent"
     ],
     "post-autoload-dump": [
-      "MyCode\\MyComposer::postautoloaddump"
+      "MyCode\\MyComposer::postautoloaddump",
+      "MyCode\\MyComposer::getEvent"
     ],
     "post-root-package-install": [
-      "MyCode\\MyComposer::postrootpackageinstall"
+      "MyCode\\MyComposer::postrootpackageinstall",
+      "MyCode\\MyComposer::getEvent"
     ],
     "post-create-project-cmd": [
-      "MyCode\\MyComposer::postcreateprojectcmd"
+      "MyCode\\MyComposer::postcreateprojectcmd",
+      "MyCode\\MyComposer::getEvent"
     ],
     "pre-operations-exec": [
-      "MyCode\\MyComposer::preoperationsexec"
+      "MyCode\\MyComposer::preoperationsexec",
+      "MyCode\\MyComposer::getEvent"
     ],
     "pre-package-install": [
-      "MyCode\\MyComposer::prepackageinstall"
+      "MyCode\\MyComposer::prepackageinstall",
+      "MyCode\\MyComposer::getEvent"
     ],
     "post-package-install": [
-      "MyCode\\MyComposer::postpackageinstall"
+      "MyCode\\MyComposer::postpackageinstall",
+      "MyCode\\MyComposer::getEvent"
     ],
     "pre-package-update": [
-      "MyCode\\MyComposer::prepackageupdate"
+      "MyCode\\MyComposer::prepackageupdate",
+      "MyCode\\MyComposer::getEvent"
     ],
     "post-package-update": [
-      "MyCode\\MyComposer::postpackageupdate"
+      "MyCode\\MyComposer::postpackageupdate",
+      "MyCode\\MyComposer::getEvent"
     ],
     "pre-package-uninstall": [
-      "MyCode\\MyComposer::prepackageuninstall"
+      "MyCode\\MyComposer::prepackageuninstall",
+      "MyCode\\MyComposer::getEvent"
     ],
     "post-package-uninstall": [
-      "MyCode\\MyComposer::postpackageuninstall"
+      "MyCode\\MyComposer::postpackageuninstall",
+      "MyCode\\MyComposer::getEvent"
+    ],
+    "command": [
+      "MyCode\\MyComposer::command"
     ]
   },
   "autoload": {
     "psr-4": {
       "MyCode\\": "src/"
     }
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "./package/*"
+    }
+  ]
 }
