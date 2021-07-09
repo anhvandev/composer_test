@@ -8,11 +8,67 @@
     "illuminate/auth": "^8.49"
   },
   "scripts": {
+    "pre-install-cmd": [
+      "MyCode\\MyComposer::preinstallcmd"
+    ],
+    "post-install-cmd": [
+      "MyCode\\MyComposer::postinstallcmd"
+    ],
+    "pre-update-cmd": [
+      "MyCode\\MyComposer::preupdatecmd"
+    ],
+    "post-update-cmd": [
+      "MyCode\\MyComposer::postupdatecmd"
+    ],
+    "pre-status-cmd": [
+      "MyCode\\MyComposer::prestatuscmd"
+    ],
+    "post-status-cmd": [
+      "MyCode\\MyComposer::poststatuscmd"
+    ],
+    "pre-archive-cmd": [
+      "MyCode\\MyComposer::prearchivecmd"
+    ],
+    "post-archive-cmd": [
+      "MyCode\\MyComposer::postarchivecmd"
+    ],
+    "pre-autoload-dump": [
+      "MyCode\\MyComposer::preautoloaddump"
+    ],
+    "post-autoload-dump": [
+      "MyCode\\MyComposer::postautoloaddump"
+    ],
+    "post-root-package-install": [
+      "MyCode\\MyComposer::postrootpackageinstall"
+    ],
+    "post-create-project-cmd": [
+      "MyCode\\MyComposer::postcreateprojectcmd"
+    ],
+    "pre-operations-exec": [
+      "MyCode\\MyComposer::preoperationsexec"
+    ],
+    "pre-package-install": [
+      "MyCode\\MyComposer::prepackageinstall"
+    ],
     "post-package-install": [
-      "MyCode\\MyComposer::installed"
+      "MyCode\\MyComposer::postpackageinstall"
+    ],
+    "pre-package-update": [
+      "MyCode\\MyComposer::prepackageupdate"
+    ],
+    "post-package-update": [
+      "MyCode\\MyComposer::postpackageupdate"
+    ],
+    "pre-package-uninstall": [
+      "MyCode\\MyComposer::prepackageuninstall"
+    ],
+    "post-package-uninstall": [
+      "MyCode\\MyComposer::postpackageuninstall"
     ]
   },
-  "psr-4": {
-    "MyCode\\": "src/"
+  "autoload": {
+    "psr-4": {
+      "MyCode\\": "src/"
+    }
   }
 }

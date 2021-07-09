@@ -21,11 +21,12 @@ use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\BufferedOutput;
 use Symfony\Component\Console\Output\ConsoleOutput;
 use Symfony\Component\Console\Output\OutputInterface;
+use MyCode\MyComposer;
 
 chdir(__DIR__);
 
 //$input = new ArrayInput(array('command' => 'require', 'packages' => ['illuminate/auth']));
-$input = new ArrayInput(array('command' => 'install'));
+$input = new ArrayInput(array('command' => 'require', 'packages' => ['illuminate/auth']));
 $output = new BufferedOutput();
 // $output = new ConsoleOutput();
 $application = new Application();
@@ -33,6 +34,6 @@ $application = new Application();
 $application->setAutoExit(false);
 $application->run($input, $output); //, $output);
 echo '<pre>';
-print_r($output->fetch());
+// print_r($output->fetch());
 echo '</pre>';
 die;
